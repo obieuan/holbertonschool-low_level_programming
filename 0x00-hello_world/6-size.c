@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- *main - Prints the sizeof char,int,long int,long long int and float
- *Return: 0 if Success
+ *main - Imprime los tamanos de char, int, long int, long long int y float
+ *Return: 0 si todo salió bien
  */
 int main(void)
 {
