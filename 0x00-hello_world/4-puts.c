@@ -1,8 +1,6 @@
 #include <stdio.h>
-
 /**
- * main - Esta funcion  imprime el texto despues de puts
- * 
+ * main - Esta funcion  imprime el texto despues de puts *
  * Return: 0 always
  */
 int main(void)
