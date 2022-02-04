@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Esta funcion  imprime un texto con printf seguido de una línea 
+ * main - Esta funcion  imprime un texto con printf seguido de una línea
  * Return: 0 always
  */
 int main(void)
