@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Esta funcion  imprime el texto despues de puts
  * 
