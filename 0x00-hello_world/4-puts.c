@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * Mi funcion - Esta funcion  imprime el texto despues de puts
+ * main - Esta funcion  imprime el texto despues de puts
  */
 int main(void)
 {
