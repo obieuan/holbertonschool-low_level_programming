@@ -13,5 +13,7 @@ int main(void)
 		printf("%d", i);
 		i++;
 	} while (i < 10);
+	i = 10;
+	putc(i, stdout);
 	return (0);
 }
