@@ -7,19 +7,18 @@
  */
 int main(void)
 {
-    int i=97;
-    do
-    {
-        putc(i,stdout);
-        i++;
-    } while (i<123);
-    i=65;
-    do
-    {
-        putc(i,stdout);
-        i++;
-    } while (i<91);
-    i=10;
-    putc(i,stdout);
+	int i = 97;
+
+	do {
+		putc(i, stdout);
+		i++;
+	} while (i < 123);
+	i = 65;
+	do {
+		putc(i, stdout);
+		i++;
+	} while (i < 91);
+	i = 10;
+	putc(i, stdout);
 	return (0);
 }
