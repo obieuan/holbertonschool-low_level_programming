@@ -17,7 +17,7 @@ int main(void)
 	do	{
 		putc(i, stdout);
 		i++;
-	} while (i < 123);
+	} while (i < 67);
 	i = 10;
 	putc(i, stdout);
 	return (0);
