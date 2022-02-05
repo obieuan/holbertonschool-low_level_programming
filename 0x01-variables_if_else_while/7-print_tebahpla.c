@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-    int i=122;
-    do
-    {
-        putc(i,stdout);
-        i--;
-    } while (i>96);
+	int i = 122;
+
+	do	{
+		putc(i, stdout);
+		i--;
+	} while (i > 96);
 	return (0);
 }

@@ -7,14 +7,14 @@
  */
 int main(void)
 {
-    int i=0;
-    do
-    {
-        if (i != 113 && i != 101)
-        {
-            putc(i,stdout);
-        }        
-        i++;
-    } while (i<123);
+	int i = 0;
+
+	do {
+		if (i != 113 && i != 101)
+		{
+			putc(i, stdout);
+		}
+		i++;
+	} while (i < 123);
 	return (0);
 }
