@@ -18,6 +18,8 @@ int main(void)
     {
         putc(i,stdout);
         i++;
-    } while (i<90);
+    } while (i<91);
+    i=10;
+    putc(i,stdout);
 	return (0);
 }
