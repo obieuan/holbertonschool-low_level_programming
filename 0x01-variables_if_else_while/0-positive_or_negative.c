@@ -1,9 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Esta funcion  imprime un numero y te dice si es positivo o negativo *
+ * Return: 0 always
+ */
 int main(void)
 {
 	int n;
