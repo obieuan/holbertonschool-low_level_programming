@@ -7,11 +7,13 @@
  */
 int main(void)
 {
-    int i=0;
-    do
-    {
-        putc(i,stdout);
-        i++;
-    } while (i<123);
+	int i = 0;
+
+	do	{
+		putc(i, stdout);
+		i++;
+	} while (i<123);
+	i = 10;
+	putc(i, stdout);
 	return (0);
 }
