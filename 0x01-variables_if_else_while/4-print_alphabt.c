@@ -16,5 +16,7 @@ int main(void)
 		}
 		i++;
 	} while (i < 123);
+	i = 10;
+	putc(i, stdout);
 	return (0);
 }
