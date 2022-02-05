@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int i = 0;
+	int i = 97;
 
 	do	{
 		putc(i, stdout);
