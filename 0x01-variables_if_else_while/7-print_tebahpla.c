@@ -13,5 +13,7 @@ int main(void)
 		putc(i, stdout);
 		i--;
 	} while (i > 96);
+	i = 10;
+	putc(i, stdout);
 	return (0);
 }
