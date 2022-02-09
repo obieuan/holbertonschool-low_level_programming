@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <main.h>
 /**
  * main - Esta funcion  imprime el texto _putchar
  * Return: 0 always
@@ -15,6 +16,8 @@ int main(void)
 	for (i = 0; i <= size; i++)
 	{
 		putchar(cadena[i]);
+		
 	}
+	putchar(10);
 	return (0);
 }
