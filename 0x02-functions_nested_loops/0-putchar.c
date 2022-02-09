@@ -12,7 +12,7 @@ int main(void)
 	char cadena[] = "_putchar";
 	int size = sizeof(cadena);
 
-	for (i = 0; i <= size; i++)
+	for (i = 0; i < size; i++)
 	{
 		putchar(cadena[i]);
 		
