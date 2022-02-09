@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * main - Esta funcion  imprime el texto _putchar
  * Return: 0 always
