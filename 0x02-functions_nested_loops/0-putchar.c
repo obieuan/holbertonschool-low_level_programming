@@ -17,6 +17,5 @@ int main(void)
 		putchar(cadena[i]);
 		
 	}
-	putchar(10);
 	return (0);
 }
