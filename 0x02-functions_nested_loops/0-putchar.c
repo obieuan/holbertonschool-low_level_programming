@@ -7,13 +7,12 @@
 int main(void)
 {
 	int i = 0;
-	char cadena[] = "_putchar";
+	char cadena[] = "_putchar\n";
 	int size = sizeof(cadena);
 
 	for (i = 0; i < size; i++)
 	{
 		_putchar(cadena[i]);
 	}
-	_putchar(10);
 	return (0);
 }
