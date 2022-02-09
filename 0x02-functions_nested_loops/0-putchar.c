@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <main.h>
+#include "main.h"
 /**
  * main - Esta funcion  imprime el texto _putchar
  * Return: 0 always
