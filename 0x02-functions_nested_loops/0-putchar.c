@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
 #include "main.h"
 /**
  * main - Esta funcion  imprime el texto _putchar
@@ -14,8 +11,8 @@ int main(void)
 
 	for (i = 0; i < size; i++)
 	{
-		putchar(cadena[i]);
+		_putchar(cadena[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
