@@ -12,12 +12,11 @@ void times_table(void)
 		for (y = 0; y < 10; y++)
 		{
 			mult = x * y;
-			if (mult == 0)
+			if (y == 0)
 			{
-				_putchar(' ');
 				_putchar('0');
 			}
-			else if (mult > 0 && mult < 10)
+			else if (mult >= 0 && mult < 10)
 			{
 				_putchar(' ');
 				_putchar(mult + '0');
