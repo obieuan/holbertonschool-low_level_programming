@@ -7,11 +7,13 @@
  */
 int print_last_digit(int n)
 {
+	int recibido = n;
+
 	if (n < 0)
 	{
 		n = abs(n);
 	}
 	n = n % 10;
-	_putchar(n);
+	_putchar(recibido + '0');
 	return (n);
 }
