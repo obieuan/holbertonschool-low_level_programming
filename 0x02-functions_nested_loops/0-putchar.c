@@ -5,13 +5,14 @@
  */
 int main(void)
 {
-	int i = 0;
-	char cadena[] = "_putchar";
-	int size = sizeof(cadena);
-
-	for (i = 0; i < size; i++)
-	{
-		_putchar(cadena[i]);
-	}
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
