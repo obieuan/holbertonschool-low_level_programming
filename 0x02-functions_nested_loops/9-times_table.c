@@ -14,6 +14,7 @@ void times_table(void)
 			mult = x * y;
 			if (mult == 0)
 			{
+				_putchar(' ');
 				_putchar('0');
 			}
 			else if (mult > 0 && mult < 10)
