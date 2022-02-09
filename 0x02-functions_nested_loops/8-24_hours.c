@@ -12,6 +12,9 @@ void jack_bauer(void)
 	{
 		for (m = 0; m < 60; m++)
 		{
+			char a = h + '0';
+			char b = m + '0';
+			
 			if (h < 10)
 			{
 				_putchar(48);
@@ -19,7 +22,7 @@ void jack_bauer(void)
 			}
 			else
 			{
-				_putchar(h + '0');
+				_putchar(a);
 			}
 			_putchar(58);
 			if (m < 10)
@@ -29,9 +32,9 @@ void jack_bauer(void)
 			}
 			else
 			{
-				_putchar(m + '0');
+				_putchar(b);
 			}
-
+			_putchar(10);
 		}
 	}
 }
