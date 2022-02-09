@@ -14,5 +14,6 @@ int main(void)
 	{
 		_putchar(cadena[i]);
 	}
+	_putchar(10);
 	return (0);
 }
