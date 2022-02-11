@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * mul - check the code
+ * print_numbers - check the code
  * Return: multi
  */
 
