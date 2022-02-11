@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * _isupper - check the code
+ * _isdigit - check the code
  * @c:variable que recibe
  * Return: 1 if upper 0 if lower
  */
+
 int _isdigit(int c)
 {
 	if (c > 47 && c < 58)
