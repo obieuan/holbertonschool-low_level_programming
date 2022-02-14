@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strlen - return size of strlen
+ * _puts - return size of strlen
  * @str: pointer 1
  * Return: void
  */
