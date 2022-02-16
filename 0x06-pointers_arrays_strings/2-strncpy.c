@@ -1,7 +1,7 @@
 #include "main.h"
 #include<stdio.h>
 /**
- * _strncat - return size of strlen
+ * _strncpy - return size of strlen
  * @dest: destino
  * @src: fuente
  * @n: number of chars
@@ -13,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	while (i <= n)
 	{
-        dest[i] = src [i];
+		dest[i] = src[i];
 		i++;
 	}
 	return (dest);
