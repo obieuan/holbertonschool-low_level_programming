@@ -4,7 +4,7 @@
  * _strchr - Returns a pointer to the first occurrence of the character
  * @s: pointer to string
  * @c: byte a llenar
- * Return: dest
+ * Return: s+i
  */
 char *_strchr(char *s, char c)
 {
