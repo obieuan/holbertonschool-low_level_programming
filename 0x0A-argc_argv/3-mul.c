@@ -16,5 +16,5 @@ int main(int argc, char *argv[])
 	}
 	multi = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", multi);
-	return (1);
+	return (0);
 }
