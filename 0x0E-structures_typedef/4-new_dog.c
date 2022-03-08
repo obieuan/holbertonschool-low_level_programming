@@ -1,11 +1,10 @@
 #include "dog.h"
 #include <stdlib.h>
-
 /**
- * new_dog - entry point
- * @name: string from main, name of pet
- * @age: number from main, age of pet
- * @owner: string from main, owner of pet
+ * new_dog - function
+ * @name: string
+ * @age: number
+ * @owner: string
  * Return: p
  */
 dog_t *new_dog(char *name, float age, char *owner)
