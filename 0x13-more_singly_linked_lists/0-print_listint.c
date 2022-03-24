@@ -1,11 +1,9 @@
 #include "lists.h"
-
 /**
- * print_listint - prints all the elements of a listint_t list
- * @h: points
- * Return: the number of nodes
+ * print_listint - imprime todos los elementos de una lista
+ * @h: puntos
+ * Return: nodos
  */
-
 size_t print_listint(const listint_t *h)
 {
 	int i = 0;
