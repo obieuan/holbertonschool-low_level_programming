@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * free_listint2 - libera espacio de una lista
- * @head: encabezado
+ * @head: inicio de la lista
  * Return: nada.
  */
 void free_listint2(listint_t **head)
