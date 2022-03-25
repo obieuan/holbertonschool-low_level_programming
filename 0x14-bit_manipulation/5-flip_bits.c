@@ -8,10 +8,10 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int prueba = 0;
-	int revisar = 1;
+	unsigned long int prueba = 0;
+	unsigned long int revisar = 1;
 	int contador = 0;
-	int i = 0;
+	unsigned int i = 0;
 
 	contador = 0;
 	prueba = n ^ m;
