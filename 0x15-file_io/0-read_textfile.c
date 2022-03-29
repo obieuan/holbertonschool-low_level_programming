@@ -10,28 +10,40 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t texto, texto_aux, numCaracteres;
+	int ID = 0;
+	ssize_t numChar = 0;
+	ssize_t cantidad = 0;
 	char *caracteres = NULL;
 
-	caracteres = malloc(letters);
-	if (caracteres == NULL || filename == NULL)
+	if (filename != NULL)
 	{
-		return (0);
-	}
+		caracteres = malloc(letters);
+		if (caracteres == NULL)
+		{
+			return (0);
+		}
 
-	texto = open(filename, O_RDONLY);
-
-	if (texto == -1)
-	{
+		ID = open(filename, O_RDONLY, 0600);
+		if (ID == -1)
+		{
+			free(caracteres);
+			return (0);
+		}
+		cantidad = read(ID, caracteres, letters);
+		if (cantidad == -1)
+		{
+			free(caracteres);
+			return (0);
+		}
+		numChar = write(STDOUT_FILENO, caracteres, cantidad);
+		if (numChar == -1 || numChar < cantidad)
+		{
+			free(caracteres);
+			return (0);
+		}
+		close(ID);
 		free(caracteres);
-		return (0);
+		return (numChar);
 	}
-
-	texto_aux = read(texto, caracteres, letters);
-
-	numCaracteres = write(STDOUT_FILENO, caracteres, texto_aux);
-
-	close(texto);
-
-	return (numCaracteres);
+	return (0);
 }
