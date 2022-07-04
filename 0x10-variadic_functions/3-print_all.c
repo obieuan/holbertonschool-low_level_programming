@@ -1,88 +1,99 @@
-#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-/**
- * p_char - print char
- * @list:arg
- * Return: void
- */
+#include "variadic_functions.h"
+void print_c(va_list parameters, char *separator);
+void print_i(va_list parameters, char *separator);
+void print_f(va_list parameters, char *separator);
+void print_s(va_list parameters, char *separator);
 
-void p_char(va_list list)
-{
-	printf("%c", va_arg(list, int));
-}
 /**
- * p_string - print string
- * @list:arg
- * Return: void
- */
-
-void p_string(va_list list)
-{
-	char *str;
-
-	str = va_arg(list, char*);
-	if (str == NULL)
-		str = "(nil)";
-printf("%s", str);
-}
-/**
- * p_integer - print integer
- * @list:arg
- * Return: void
- */
-
-void p_integer(va_list list)
-{
-	printf("%i", va_arg(list, int));
-}
-/**
- * p_float - print float
- * @list:arg
- * Return: void
- */
-
-void p_float(va_list list)
-{
-	printf("%f", va_arg(list, double));
-}
-/**
- * print_all - print everything
- * @format:arg
- * Return: void
+ * print_all - a function that prints anything.
+ * @format: list of types of arguments passed to the function.
+ *
+ * Return: nothing.
  */
 void print_all(const char * const format, ...)
-
 {
-	unsigned int i, j;
-	t_print t[] = {
-		{"c", p_char},
-		{"s", p_string},
-		{"i", p_integer},
-		{"f", p_float},
+	va_list parameters;
+	char *separator = "";
+	int i = 0;
+	int j = 0;
+	wrapper rules[] = {
+		{"c", print_c},
+		{"i", print_i},
+		{"f", print_f},
+		{"s", print_s},
 		{NULL, NULL}
 	};
-	va_list valist;
-	char *s = "";
+	va_start(parameters, format);
 
-	va_start(valist, format);
-	i = 0;
-	while (format && format[i])
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (t[j].x != NULL)
+		while (j < 4)
 		{
-			if (*(t[j].x) == format[i])
+			if (format[i] == *rules[j].character)
 			{
-				printf("%s", s);
-				t[j].T_func(valist);
-				s = ", ";
-				break;
+				rules[j].ptrfunc(parameters, separator);
+				separator = ", ";
 			}
 			j++;
 		}
 		i++;
 	}
-	va_end(valist);
 	printf("\n");
+	va_end(parameters);
+}
+
+/**
+ * print_c - a function that prints a character.
+ * @parameters: argument passed to function.
+ * @separator: string separator to be used.
+ *
+ * Return: nothing.
+ */
+void print_c(va_list parameters, char *separator)
+{
+	printf("%s%c", separator, va_arg(parameters, int));
+}
+
+/**
+ * print_i - a function that prints an integer.
+ * @parameters: argument passed to function.
+ * @separator: string separator to be used.
+ *
+ * Return: nothing.
+ */
+void print_i(va_list parameters, char *separator)
+{
+	printf("%s%d", separator, va_arg(parameters, int));
+}
+
+/**
+ * print_f - a function that prints a float.
+ * @parameters: argument passed to function.
+ * @separator: string separator to be used.
+ *
+ * Return: nothing.
+ */
+void print_f(va_list parameters, char *separator)
+{
+	printf("%s%f", separator, va_arg(parameters, double));
+}
+
+/**
+ * print_s - a function that prints a string.
+ * @parameters: argument passed to function.
+ * @separator: string separator to be used.
+ *
+ * Return: nothing.
+ */
+void print_s(va_list parameters, char *separator)
+{
+	char *string;
+
+	string = va_arg(parameters, char *);
+	if (string == NULL)
+		string = "(nil)";
+	printf("%s%s", separator, string);
 }
